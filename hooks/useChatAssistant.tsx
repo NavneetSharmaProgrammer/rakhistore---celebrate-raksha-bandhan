@@ -1,8 +1,22 @@
 // File: hooks/useChatAssistant.tsx
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext, createContext, ReactNode } from 'react';
 import { Message } from '../types';
 
-export const useChatAssistant = () => {
+// Define the shape of the context's value
+interface ChatAssistantContextType {
+  messages: Message[];
+  isLoading: boolean;
+  sendMessage: (newMessageText: string) => Promise<void>;
+  isChatOpen: boolean;
+  openChat: () => void;
+  closeChat: () => void;
+}
+
+// Create the context with a default undefined value
+const ChatAssistantContext = createContext<ChatAssistantContextType | undefined>(undefined);
+
+// Create the Provider component
+export const ChatAssistantProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -25,34 +39,30 @@ export const useChatAssistant = () => {
       sender: 'user',
     };
 
-    // Add the user's message to the state
-    setMessages(prevMessages => [...prevMessages, userMessage]);
+    const currentMessages = [...messages, userMessage];
+    setMessages(currentMessages);
     setIsLoading(true);
-    
-    // Create a placeholder for the AI's response to appear instantly
+
     const aiMessageId = (Date.now() + 1).toString();
     const aiMessagePlaceholder: Message = {
       id: aiMessageId,
-      text: '', // Start with empty text
+      text: '',
       sender: 'ai',
     };
     setMessages(prev => [...prev, aiMessagePlaceholder]);
 
     try {
-      // Prepare chat history for the API
-      // Note: We use the state *before* adding the placeholder for the history
-      const historyForApi = [...messages, userMessage].map(m => ({
-        role: m.sender,
+      const historyForApi = currentMessages.map(m => ({
+        role: m.sender === 'ai' ? 'model' : 'user', // Match API's role names
         parts: [{ text: m.text }],
       }));
 
-      // Call our secure Vercel API route
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           history: historyForApi,
-          message: newMessageText, // The API might not need this if history includes it, but it's good practice
+          message: newMessageText,
         }),
       });
 
@@ -68,23 +78,17 @@ export const useChatAssistant = () => {
         if (done) break;
 
         const chunk = decoder.decode(value);
-        // Update the AI message placeholder with the new text chunk
         setMessages(prev =>
           prev.map(msg =>
-            msg.id === aiMessageId
-              ? { ...msg, text: msg.text + chunk }
-              : msg
+            msg.id === aiMessageId ? { ...msg, text: msg.text + chunk } : msg
           )
         );
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      // Update the placeholder with an error message
       setMessages(prev =>
         prev.map(msg =>
-          msg.id === aiMessageId
-            ? { ...msg, text: "Sorry, I'm having a little trouble right now. Please try again." }
-            : msg
+          msg.id === aiMessageId ? { ...msg, text: "Sorry, I'm having trouble." } : msg
         )
       );
     } finally {
@@ -92,12 +96,20 @@ export const useChatAssistant = () => {
     }
   }, [messages, isLoading]);
 
-  return {
-    messages,
-    isLoading,
-    sendMessage,
-    isChatOpen,
-    openChat,
-    closeChat,
-  };
+  const value = { messages, isLoading, sendMessage, isChatOpen, openChat, closeChat };
+
+  return (
+    <ChatAssistantContext.Provider value={value}>
+      {children}
+    </ChatAssistantContext.Provider>
+  );
+};
+
+// Create the custom hook to easily access the context
+export const useChatAssistant = (): ChatAssistantContextType => {
+  const context = useContext(ChatAssistantContext);
+  if (context === undefined) {
+    throw new Error('useChatAssistant must be used within a ChatAssistantProvider');
+  }
+  return context;
 };
