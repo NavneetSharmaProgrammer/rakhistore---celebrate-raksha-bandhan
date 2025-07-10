@@ -1,10 +1,13 @@
-// 1. IMPORT 'ChatSession' INSTEAD OF 'Chat'
-import { GoogleGenAI, ChatSession, GenerateContentResponse } from "@google/genai";
+import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 import { PRODUCTS } from '../constants';
 
+// This is the production-safe way to get your API key.
+// It will read the 'GOOGLE_GEMINI_API_KEY' variable you set in Vercel.
 const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
 
 if (!apiKey) {
+    // This will cause the Vercel function to fail with a clear error
+    // if the environment variable is not set.
     throw new Error("GOOGLE_GEMINI_API_KEY environment variable not set.");
 }
 
@@ -37,8 +40,8 @@ Instructions:
 5. Do not output JSON or markdown. Respond in plain, friendly text.
 `;
 
-// 2. UPDATE THE RETURN TYPE TO 'ChatSession'
-export const startChatSession = (): ChatSession => {
+// Use the 'Chat' type, which IS exported from the module.
+export const startChatSession = (): Chat => {
     return ai.chats.create({
         model: 'gemini-1.5-flash',
         config: {
@@ -47,9 +50,9 @@ export const startChatSession = (): ChatSession => {
     });
 };
 
-// 3. UPDATE THE PARAMETER TYPE TO 'ChatSession'
-export const streamMessage = (chat: ChatSession, message: string): Promise<AsyncGenerator<GenerateContentResponse>> => {
-    // Now that 'chat' is correctly typed as ChatSession,
-    // TypeScript knows its 'sendMessageStream' method accepts a string.
-    return chat.sendMessageStream(message);
+// Use the 'Chat' type for the parameter.
+export const streamMessage = (chat: Chat, message: string): Promise<AsyncGenerator<GenerateContentResponse>> => {
+    // The 'sendMessageStream' method on the 'Chat' object correctly
+    // expects an object with a 'message' property.
+    return chat.sendMessageStream({ message });
 };
