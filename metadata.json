@@ -1,0 +1,8 @@
+{
+  "name": "RakhiStore - Celebrate Raksha Bandhan",
+  "description": "At RakhiStore, we believe Raksha Bandhan is not just a festival — it's a heartfelt expression of sibling love. Our mission is to bring beauty, meaning, and convenience to your celebration with handpicked Rakhis, curated combos, and heartfelt gifts.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}

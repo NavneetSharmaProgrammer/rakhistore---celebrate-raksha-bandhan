@@ -1,0 +1,92 @@
+Of course! I'd be happy to guide you through the complete workflow, from running your project locally in VS Code to deploying it for the world to see on Vercel. It's a standard and powerful process for modern web development.
+Here is a step-by-step guide.
+Part 1: Running the Project Locally in VS Code
+Your project is currently set up as a collection of static files (HTML, CSS from a CDN, and JavaScript modules) without a complex build system. The easiest way to run this locally is with a live server that can handle an index.html file.
+Prerequisite: Install VS Code: If you haven't already, download and install Visual Studio Code.
+Install the "Live Server" Extension:
+Open VS Code.
+Go to the Extensions view by clicking the square icon on the sidebar or pressing Ctrl+Shift+X.
+Search for "Live Server" (the one by Ritwick Dey is the most popular).
+Click "Install".
+Open Your Project Folder:
+In VS Code, go to File > Open Folder... and select the directory containing your index.html, App.tsx, etc.
+Handle the API Key for Local Testing:
+Your code in services/geminiService.ts uses process.env.API_KEY. A simple live server cannot access environment variables.
+For local testing only, you can temporarily modify services/geminiService.ts.
+Find this line:
+Generated typescript
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+Use code with caution.
+TypeScript
+Temporarily replace it with your actual key:
+Generated typescript
+// !! FOR LOCAL TESTING ONLY - DO NOT COMMIT TO GITHUB !!
+const ai = new GoogleGenAI({ apiKey: "YOUR_GEMINI_API_KEY_HERE" });
+Use code with caution.
+TypeScript
+⚠️ IMPORTANT: We will set this up securely in Vercel later. Do not ever commit your API key directly into your code on GitHub.
+Start the Server:
+In the VS Code file explorer, right-click on your index.html file.
+Select "Open with Live Server".
+A new browser tab will open at an address like http://127.0.0.1:5500, and you'll see your application running! It will automatically refresh whenever you save a file.
+Part 2: Pushing Your Code to GitHub
+Version control is essential. This process will store your code on GitHub, creating a backup and a central place for Vercel to access it.
+Prerequisites:
+Create a GitHub account.
+Install Git on your computer.
+Create a New Repository on GitHub:
+Log in to GitHub.
+Click the + icon in the top-right corner and select "New repository".
+Give your repository a name (e.g., rakhi-store-project).
+Choose if you want it to be Public or Private.
+Do not initialize it with a README, .gitignore, or license, since you already have files.
+Click "Create repository".
+Initialize Git in Your Project Folder:
+Open a terminal or command prompt inside your project folder in VS Code (View > Terminal or `Ctrl+``).
+Run the following commands one by one:
+Generated bash
+# Initialize a new Git repository
+git init -b main
+
+# Create a .gitignore file to exclude unnecessary files
+# (This is a good practice for all projects)
+echo "node_modules\n.env" > .gitignore
+
+# Add all your files to be tracked by Git
+git add .
+
+# Create your first "save point" or commit
+git commit -m "Initial commit of RakhiStore project"
+
+# Connect your local folder to the GitHub repository you created
+# (Copy the HTTPS or SSH URL from your new GitHub repo page)
+git remote add origin YOUR_GITHUB_REPOSITORY_URL_HERE
+
+# Push your code to GitHub
+git push -u origin main
+Use code with caution.
+Bash
+After you run git push, refresh your GitHub repository page. You should see all your files there!
+Part 3: Deploying to Vercel
+Vercel is a platform that makes deploying frontend applications incredibly simple, especially when they're on GitHub.
+Sign Up for Vercel:
+Go to vercel.com and click "Sign Up".
+It's highly recommended to sign up with your GitHub account. This makes the integration seamless.
+Import and Deploy Your Project:
+Once you're logged into your Vercel dashboard, click "Add New... > Project".
+Vercel will show a list of your GitHub repositories. Find your rakhi-store-project and click "Import".
+Configure the Project:
+Vercel is smart, but your project is unique. You'll need to configure it correctly.
+Framework Preset: Vercel might not recognize a framework. Select "Other".
+Build and Output Settings: Your project doesn't have a build step (like npm run build).
+Toggle the "Build Command" switch to override it, and leave the field blank.
+Toggle the "Output Directory" switch and ensure it's set to the root directory (it usually is by default, or you can just leave it).
+Environment Variables: This is the most critical step for making your app work online!
+Expand the "Environment Variables" section.
+For the NAME, enter API_KEY.
+For the VALUE, paste your actual Google Gemini API Key.
+Click "Add". This securely stores your key so your deployed app can use it without exposing it in the code.
+Deploy!
+Click the "Deploy" button.
+Vercel will start the deployment process (which will be very fast for a static site). Within a minute, you'll see a "Congratulations!" message with a screenshot of your live site.
+You're all set! Vercel will give you a public URL (like your-project-name.vercel.app) where you can see your live RakhiStore. Now, whenever you git push new changes to your main branch on GitHub, Vercel will automatically redeploy your site with the updates.
