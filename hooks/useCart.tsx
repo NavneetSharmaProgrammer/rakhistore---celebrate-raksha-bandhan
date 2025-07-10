@@ -1,4 +1,4 @@
-
+// File: hooks/useCart.tsx
 import React, { createContext, useState, useContext, ReactNode, useCallback } from 'react';
 import { Product, CartItem } from '../types';
 
@@ -16,6 +16,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
+  // THIS IS THE ONLY addToCart FUNCTION YOU NEED. IT'S CORRECT.
   const addToCart = useCallback((product: Product, quantity = 1) => {
     setCart(prevCart => {
       const existingItem = prevCart.find(item => item.id === product.id);
@@ -65,3 +66,5 @@ export const useCart = (): CartContextType => {
   }
   return context;
 };
+
+// DELETE ALL THE CODE THAT WAS BELOW THIS LINE IN YOUR FILE

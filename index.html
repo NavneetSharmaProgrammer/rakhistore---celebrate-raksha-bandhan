@@ -21,8 +21,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- 
-      THIS IS THE FIX!
-      This script block now correctly defines your custom theme.
+      THIS IS THE SINGLE, CORRECTED CONFIGURATION SCRIPT
+      It contains all your colors, fonts, and ALL animations including 'fade-in-up'.
     -->
     <script>
       tailwind.config = {
@@ -49,15 +49,28 @@
                 '0%, 100%': { textShadow: '0 0 4px rgba(219, 39, 119, 0.7)' },
                 '50%': { textShadow: '0 0 8px rgba(219, 39, 119, 1)' },
               },
-               fadeIn: {
+              fadeIn: {
                 '0%': { opacity: 0, transform: 'translateY(10px)' },
                 '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              // The 'fade-in-up' keyframe is now correctly included here
+              'fade-in-up': {
+                '0%': {
+                  opacity: '0',
+                  transform: 'translateY(20px)'
+                },
+                '100%': {
+                  opacity: '1',
+                  transform: 'translateY(0)'
+                },
               },
             },
             animation: {
               glow: 'glow 3s ease-in-out infinite',
               'subtle-glow': 'subtleGlow 2.5s ease-in-out infinite',
               'fade-in': 'fadeIn 0.5s ease-out forwards',
+              // The 'fade-in-up' utility is now correctly included here
+              'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
             },
           }
         }
