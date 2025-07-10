@@ -1,15 +1,17 @@
-
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 import { PRODUCTS } from '../constants';
 
-// if (!process.env.API_KEY) {
-//     console.error("API_KEY environment variable not set.");
-// }
+// This is the production-safe way to get your API key.
+// It will read the 'GOOGLE_GEMINI_API_KEY' variable you set in Vercel.
+const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
 
-// const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+if (!apiKey) {
+    // This will cause the Vercel function to fail with a clear error
+    // if the environment variable is not set.
+    throw new Error("GOOGLE_GEMINI_API_KEY environment variable not set.");
+}
 
-// !! FOR LOCAL TESTING ONLY - DO NOT COMMIT TO GITHUB !!
-// const ai = new GoogleGenAI({ apiKey: "YOUR_GEMINI_API_KEY_HERE" }); 
+const ai = new GoogleGenAI({ apiKey });
 
 const productListForAI = PRODUCTS.map(p => `- ${p.name} (ID: ${p.id})`).join('\n');
 
@@ -40,7 +42,8 @@ Instructions:
 
 export const startChatSession = (): Chat => {
     return ai.chats.create({
-        model: 'gemini-2.5-flash',
+        // Using 'gemini-1.5-flash' as it's the current name for the fast model
+        model: 'gemini-1.5-flash',
         config: {
             systemInstruction: systemInstruction,
         },
@@ -48,5 +51,6 @@ export const startChatSession = (): Chat => {
 };
 
 export const streamMessage = (chat: Chat, message: string): Promise<AsyncGenerator<GenerateContentResponse>> => {
-    return chat.sendMessageStream({ message });
+    // Corrected: sendMessageStream takes the string directly, not an object
+    return chat.sendMessageStream(message);
 };
