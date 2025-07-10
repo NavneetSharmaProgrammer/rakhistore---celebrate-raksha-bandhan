@@ -6,10 +6,10 @@ if (!process.env.API_KEY) {
     console.error("API_KEY environment variable not set.");
 }
 
-// const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
 
 // !! FOR LOCAL TESTING ONLY - DO NOT COMMIT TO GITHUB !!
-const ai = new GoogleGenAI({ apiKey: "YOUR_GEMINI_API_KEY_HERE" }); 
+// const ai = new GoogleGenAI({ apiKey: "YOUR_GEMINI_API_KEY_HERE" }); 
 
 const productListForAI = PRODUCTS.map(p => `- ${p.name} (ID: ${p.id})`).join('\n');
 
