@@ -211,7 +211,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-027',
-    name: '027Glittering Ram Sita Ram Decor',
+    name: '027 Glittering Ram Sita Ram Decor',
     description: 'A spiritual decorative patch with "Ram Ram Sita Ram" in golden glitter.',
     price: 20,
     image: '/images/r27.jpg',
