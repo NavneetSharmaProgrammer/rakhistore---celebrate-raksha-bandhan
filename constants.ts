@@ -3,7 +3,7 @@ import { Product } from './types';
 export const PRODUCTS: Product[] = [
   {
     id: 'rakhi-001',
-    name: '001 Charming Shubh Premium Rakhi',
+    name: '01 Charming Shubh Premium Rakhi',
     description: 'A classic Rakhi with a timeless design, perfect for traditional celebrations.',
     price: 50,
     image: 'images/r1.jpg',
@@ -11,7 +11,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-002',
-    name: '002 Royal Turtle Premium Rakhi',
+    name: '02 Royal Turtle Premium Rakhi',
     description: 'A unique Rakhi featuring elegant turtle charms and colorful beads.',
     price: 45,
     image: '/images/r2.jpg',
@@ -19,7 +19,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-003',
-    name: '003 Divine Radhe Rakhi',
+    name: '03 Divine Radhe Rakhi',
     description: 'An exquisite designer Rakhi with "Radhe" inscribed, for a special brother.',
     price: 40,
     image: '/images/r3.jpg',
@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-004',
-    name: '004 Graceful Ganesha Rakhi',
+    name: '04 Graceful Ganesha Rakhi',
     description: 'A classic Rakhi with a divine Ganesha charm, perfect for blessings.',
     price: 40,
     image: '/images/r4.jpg',
@@ -35,7 +35,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-005',
-    name: '005 Sterling Silver Charm Rakhi',
+    name: '05 Sterling Silver Charm Rakhi',
     description: 'A premium, fancy Rakhi in silver with a striking red centerpiece.',
     price: 50,
     image: '/images/r5.jpg',
@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-006',
-    name: '006 Tom & Jerry Kids Rakhi',
+    name: '06 Tom & Jerry Kids Rakhi',
     description: 'Let your little brother show off his favorite cartoon duo.',
     price: 30,
     image: '/images/r6.jpg',
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-007',
-    name: '007 Sacred Designer Rakhi',
+    name: '07 Sacred Designer Rakhi',
     description: 'A simple yet elegant Rakhi made with a central rectangular stone.',
     price: 40,
     image: '/images/r7.jpg',
@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-008',
-    name: '008 Doraemon Light-Up Kids Rakhi',
+    name: '08 Doraemon Light-Up Kids Rakhi',
     description: 'A fun, light-up Doraemon Rakhi for the little adventurer.',
     price: 20,
     image: '/images/r8.jpg',
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-009',
-    name: '009 Mickey Mouse Light-Up Kids Rakhi',
+    name: '09 Mickey Mouse Light-Up Kids Rakhi',
     description: 'A magical, light-up Mickey Mouse Rakhi for your little brother.',
     price: 20,
     image: '/images/r9.jpg',
@@ -75,7 +75,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-010',
-    name: '010 Radiant Pearl Designer Rakhi',
+    name: '10 Radiant Pearl Designer Rakhi',
     description: 'An exquisite designer Rakhi with pearls and colorful beads.',
     price: 35,
     image: '/images/r10.jpg',
@@ -83,7 +83,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-011',
-    name: '011 Colorful Floral Rakhi',
+    name: '11 Colorful Floral Rakhi',
     description: 'A vibrant Rakhi with a multi-colored floral centerpiece and stones.',
     price: 30,
     image: '/images/r11.jpg',
@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-012',
-    name: '012 Rudraksha Fusion Rakhi',
+    name: '12 Rudraksha Fusion Rakhi',
     description: 'Traditional Rudraksha beads meet modern stone work for a divine look.',
     price: 30,
     image: '/images/r12.jpg',
@@ -99,7 +99,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-013',
-    name: '013 Enamel Flower Rakhi',
+    name: '13 Enamel Flower Rakhi',
     description: 'Elegant Rakhi with beautiful red and green enamel work on a floral design.',
     price: 30,
     image: '/images/r13.jpg',
@@ -107,7 +107,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-014',
-    name: '014 Sandalwood Serenity Rakhi',
+    name: '14 Sandalwood Serenity Rakhi',
     description: 'A simple and elegant Rakhi made from calming sandalwood beads.',
     price: 20,
     image: '/images/r14.jpg',
@@ -115,7 +115,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-015',
-    name: '015 Rose Gold Floral Rakhi',
+    name: '15 Rose Gold Floral Rakhi',
     description: 'A stunning rose gold Rakhi with a floral centerpiece and stone accents.',
     price: 15,
     image: '/images/r15.jpg',
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-016',
-    name: '016 Auspicious Om Rakhi',
+    name: '16 Auspicious Om Rakhi',
     description: 'A sacred Rakhi featuring the Om symbol for peace and protection.',
     price: 10,
     image: '/images/r16.jpg',
@@ -131,7 +131,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-017',
-    name: '017 Family Rakhi Set (Set of 5)',
+    name: '17 Family Rakhi Set (Set of 5)',
     description: 'A beautiful set of 5 matching Rakhis with heart and swastik motifs.',
     price: 10,
     image: '/images/r17.jpg',
@@ -139,7 +139,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-018',
-    name: '018 Playful Turtle Rakhi Set (Set of 5)',
+    name: '18 Playful Turtle Rakhi Set (Set of 5)',
     description: 'A fun set of 5 Rakhis featuring adorable turtle charms.',
     price: 10,
     image: '/images/r18.jpg',
@@ -147,7 +147,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-019',
-    name: '019 Cool "BRO" Rakhi',
+    name: '19 Cool "BRO" Rakhi',
     description: 'A trendy and modern Rakhi that says it all. For the coolest brother.',
     price: 10,
     image: '/images/r19.jpg',
@@ -155,7 +155,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-020',
-    name: '020 Divine Trishul Rakhi',
+    name: '20 Divine Trishul Rakhi',
     description: 'A powerful Rakhi featuring Lord Shiva\'s Trishul for strength and protection.',
     price: 10,
     image: '/images/r20.jpg',
@@ -163,7 +163,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-021',
-    name: '021 Regal Red Stone Rakhi',
+    name: '21 Regal Red Stone Rakhi',
     description: 'A luxurious Rakhi with golden beads and a brilliant red stone centerpiece.',
     price: 20,
     image: '/images/r21.jpg',
@@ -171,7 +171,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-022',
-    name: '022 Classic Om Symbol Rakhi',
+    name: '22 Classic Om Symbol Rakhi',
     description: 'A traditional Om Rakhi with vibrant yellow and red threads.',
     price: 10,
     image: '/images/r22.jpg',
@@ -179,7 +179,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-023',
-    name: '023 Golden Ganesha Rakhi',
+    name: '23 Golden Ganesha Rakhi',
     description: 'A brilliant golden Rakhi with an embossed Ganesha and pearl accents.',
     price: 40,
     image: '/images/r23.jpg',
@@ -187,7 +187,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-024',
-    name: '024 Pearl and Petal Rakhi',
+    name: '24 Pearl and Petal Rakhi',
     description: 'An elegant Rakhi featuring pearls and colorful enamel petals.',
     price: 30,
     image: '/images/r24.jpg',
@@ -195,7 +195,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-025',
-    name: '025 Festive Orange Lumba Rakhi',
+    name: '25 Festive Orange Lumba Rakhi',
     description: 'A gorgeous Lumba Rakhi with intricate goldwork and a festive orange tassel.',
     price: 25,
     image: '/images/r25.jpg',
@@ -203,7 +203,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-026',
-    name: '026 Sacred Rudraksha Rakhi Pack',
+    name: '26 Sacred Rudraksha Rakhi Pack',
     description: 'A bulk pack of traditional Rudraksha Rakhis for the whole family.',
     price: 10,
     image: '/images/r26.jpg',
@@ -211,7 +211,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-027',
-    name: '027 Glittering Ram Sita Ram Decor',
+    name: '27 Glittering Ram Sita Ram Decor',
     description: 'A spiritual decorative patch with "Ram Ram Sita Ram" in golden glitter.',
     price: 20,
     image: '/images/r27.jpg',
@@ -219,7 +219,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-028',
-    name: '028 Glittering Ram Ram Hexagon Decor',
+    name: '28 Glittering Ram Ram Hexagon Decor',
     description: 'A hexagonal spiritual decorative patch with "Ram Ram" in golden glitter.',
     price: 15,
     image: '/images/r28.jpg',
@@ -227,7 +227,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-029',
-    name: '029 Glittering Swastik Ram Decor',
+    name: '29 Glittering Swastik Ram Decor',
     description: 'A Swastik-shaped spiritual patch with "Ram Ram" in golden glitter.',
     price: 15,
     image: '/images/r29.jpg',
@@ -235,7 +235,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-030',
-    name: '030 Glittering Temple Ram Decor',
+    name: '30 Glittering Temple Ram Decor',
     description: 'A temple-shaped spiritual patch with "Ram Ram" in golden glitter.',
     price: 20,
     image: '/images/r30.jpg',
@@ -243,7 +243,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-031',
-    name: '031 Glittering Jai Shri Ram Decor',
+    name: '31 Glittering Jai Shri Ram Decor',
     description: 'An arch-shaped spiritual patch with "Shri Ram Jai Ram Sita Ram" in golden glitter.',
     price: 20,
     image: '/images/r31.jpg',
@@ -251,7 +251,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-032',
-    name: '032 Olive Green Lumba Set',
+    name: '32 Olive Green Lumba Set',
     description: 'A set of elegant Lumba Rakhis in a beautiful olive green hue with pearl accents.',
     price: 20,
     image: '/images/r32.jpg',
@@ -259,7 +259,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-033',
-    name: '033 Royal Red & Gold Lumba Set',
+    name: '33 Royal Red & Gold Lumba Set',
     description: 'A set of royal Lumba Rakhis with rich red beads and golden details.',
     price: 20,
     image: '/images/r33.jpg',
@@ -267,7 +267,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-034',
-    name: '034 Crystal Snowflake Lumba Set',
+    name: '34 Crystal Snowflake Lumba Set',
     description: 'A dazzling set of Lumba Rakhis with clear crystal beads and snowflake motifs.',
     price: 15,
     image: '/images/r34.jpg',
@@ -275,7 +275,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-035',
-    name: '035 Azure Blue Lumba Set',
+    name: '35 Azure Blue Lumba Set',
     description: 'A stunning set of Lumba Rakhis in azure blue with silver accents and pearls.',
     price: 15,
     image: '/images/r35.jpg',
@@ -283,7 +283,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-036',
-    name: '036 Colorful Evil Eye Lumba Set',
+    name: '36 Colorful Evil Eye Lumba Set',
     description: 'A vibrant set of Lumba Rakhis with multi-colored beads to ward off the evil eye.',
     price: 20,
     image: '/images/r36.jpg',
@@ -291,7 +291,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-037',
-    name: '037 Classic Gold & White Lumba Set',
+    name: '37 Classic Gold & White Lumba Set',
     description: 'A timeless set of Lumba Rakhis with elegant white and golden beads.',
     price: 20,
     image: '/images/r37.jpg',
@@ -299,7 +299,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-038',
-    name: '038 Chhota Bheem Kids Rakhi',
+    name: '38 Chhota Bheem Kids Rakhi',
     description: 'For the little hero, a Rakhi featuring the mighty Chhota Bheem on his cycle.',
     price: 40,
     image: '/images/r38.jpg',
@@ -307,7 +307,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-039',
-    name: '039 Anime Hero Kids Rakhi',
+    name: '39 Anime Hero Kids Rakhi',
     description: 'A bright and cheerful light-up Rakhi for fans of anime heroes.',
     price: 20,
     image: '/images/r39.jpg',
@@ -315,7 +315,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-040',
-    name: '040 Superman Kids Rakhi',
+    name: '40 Superman Kids Rakhi',
     description: 'A super Rakhi for a super brother, featuring the iconic Superman logo.',
     price: 20,
     image: '/images/r40.jpg',
@@ -323,7 +323,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-041',
-    name: '041 Pokemon Trainer Kids Rakhi',
+    name: '41 Pokemon Trainer Kids Rakhi',
     description: 'Gotta catch \'em all! A cool Rakhi for the aspiring Pokemon trainer.',
     price: 20,
     image: '/images/r41.jpg',
@@ -331,7 +331,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-042',
-    name: '042 Minimalist Wooden Bead Rakhi',
+    name: '42 Minimalist Wooden Bead Rakhi',
     description: 'A simple, earthy Rakhi with classic wooden beads for a minimalist look.',
     price: 10,
     image: '/images/r42.jpg',
@@ -339,7 +339,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-043',
-    name: '043 Crimson Stone & Gold Rakhi',
+    name: '43 Crimson Stone & Gold Rakhi',
     description: 'A beautiful Rakhi combining golden beads with sparkling crimson stones.',
     price: 12,
     image: '/images/r43.jpg',
@@ -347,7 +347,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-044',
-    name: '044 Jeweled Peacock Rakhi',
+    name: '44 Jeweled Peacock Rakhi',
     description: 'An ornate Rakhi with a stunning peacock design and premium packaging.',
     price: 40,
     image: '/images/r44.jpg',
@@ -355,7 +355,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-045',
-    name: '045 Blue Evil Eye Protection Set',
+    name: '45 Blue Evil Eye Protection Set',
     description: 'A beautiful set of Rakhis with the protective Evil Eye charm and blue beads.',
     price: 40,
     image: '/images/r45.jpg',
@@ -363,7 +363,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-046',
-    name: '046 Silver Evil Eye Rakhi Set',
+    name: '46 Silver Evil Eye Rakhi Set',
     description: 'A stylish set of silver-beaded Rakhis featuring the dark blue Evil Eye.',
     price: 25,
     image: '/images/r46.jpg',
@@ -371,7 +371,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-047',
-    name: '047 Joyful Ganesha Rakhi',
+    name: '47 Joyful Ganesha Rakhi',
     description: 'A cheerful Rakhi with a red Ganesha charm and colorful beads.',
     price: 30,
     image: '/images/r47.jpg',
@@ -379,7 +379,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-048',
-    name: '048 Enamel Peacock Rakhi',
+    name: '48 Enamel Peacock Rakhi',
     description: 'A majestic Rakhi with a beautifully detailed enamel peacock centerpiece.',
     price: 40,
     image: '/images/r48.jpg',
@@ -387,7 +387,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-049',
-    name: '049 Symmetric Stone Work Rakhi',
+    name: '49 Symmetric Stone Work Rakhi',
     description: 'An elegant Rakhi with intricate, symmetric stone work on a golden thread.',
     price: 40,
     image: '/images/r49.jpg',
@@ -395,7 +395,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-050',
-    name: '050 Ornate Blue Evil Eye Rakhi',
+    name: '50 Ornate Blue Evil Eye Rakhi',
     description: 'A designer Rakhi with a prominent Evil Eye charm set in an ornate golden frame.',
     price: 35,
     image: '/images/r50.jpg',
@@ -403,7 +403,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-051',
-    name: '051 Vibrant Floral Stone Rakhi',
+    name: '51 Vibrant Floral Stone Rakhi',
     description: 'A vibrant floral Rakhi featuring red and green stones and pearl beads.',
     price: 35,
     image: '/images/r51.jpg',
@@ -411,7 +411,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-052',
-    name: '052 Elegant Evil Eye Rakhi',
+    name: '52 Elegant Evil Eye Rakhi',
     description: 'A chic and modern Rakhi with a leaf-shaped Evil Eye charm and white beads.',
     price: 20,
     image: '/images/r52.jpg',
@@ -419,7 +419,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-053',
-    name: '053 Sparkling Diamond-Cut Rakhi',
+    name: '53 Sparkling Diamond-Cut Rakhi',
     description: 'A glittering Rakhi featuring diamond-cut stones for maximum sparkle.',
     price: 35,
     image: '/images/r53.jpg',
@@ -427,7 +427,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-054',
-    name: '054 Silver Peacock Bracelet Rakhi',
+    name: '54 Silver Peacock Bracelet Rakhi',
     description: 'A stylish silver bracelet Rakhi with a beautiful peacock charm.',
     price: 30,
     image: '/images/r54.jpg',
@@ -435,7 +435,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-055',
-    name: '055 Sandalwood Om Rakhi',
+    name: '55 Sandalwood Om Rakhi',
     description: 'A calming Rakhi featuring a wooden Om centerpiece and sandalwood beads.',
     price: 25,
     image: '/images/r55.jpg',
@@ -443,7 +443,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-056',
-    name: '056 Silver & Ruby Stone Rakhi',
+    name: '56 Silver & Ruby Stone Rakhi',
     description: 'A sophisticated silver and gold tone Rakhi with ruby-red stones.',
     price: 30,
     image: '/images/r56.jpg',
@@ -451,7 +451,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-057',
-    name: '057 Traditional Kundan Rakhi',
+    name: '57 Traditional Kundan Rakhi',
     description: 'A timeless Rakhi featuring traditional Kundan work with red and green beads.',
     price: 30,
     image: '/images/r57.jpg',
@@ -459,7 +459,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-058',
-    name: '058 Golden Filigree Stone Rakhi',
+    name: '58 Golden Filigree Stone Rakhi',
     description: 'An intricate Rakhi with delicate golden filigree work around a central stone.',
     price: 30,
     image: '/images/r58.jpg',
@@ -467,7 +467,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-059',
-    name: '059 Dapper Bow-Tie Rakhi',
+    name: '59 Dapper Bow-Tie Rakhi',
     description: 'A unique and stylish Rakhi designed like a bow-tie with pearl and stone details.',
     price: 25,
     image: '/images/r59.jpg',
@@ -475,7 +475,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-060',
-    name: '060 Tricolor Bead Rakhi',
+    name: '60 Tricolor Bead Rakhi',
     description: 'A simple yet elegant Rakhi with sparkling stones and red & green beads.',
     price: 30,
     image: '/images/r60.jpg',
@@ -483,7 +483,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-061',
-    name: '061 Earthy Wooden Bead Rakhi',
+    name: '61 Earthy Wooden Bead Rakhi',
     description: 'A minimalist Rakhi with earthy wooden beads and decorative tassels.',
     price: 20,
     image: '/images/r61.jpg',
@@ -491,7 +491,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'rakhi-062',
-    name: '062 Golden Square Stone Rakhi',
+    name: '62 Golden Square Stone Rakhi',
     description: 'A modern Rakhi design with a prominent square stone and sparkling accents.',
     price: 35,
     image: '/images/r62.jpg',
